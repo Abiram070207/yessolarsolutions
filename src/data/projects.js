@@ -44,11 +44,19 @@ export const projectsData = [
   { id: 40, title: "3kW Residential", location: "Villiseri", description: "Sustainable 3kW domestic energy for better future." },
   { id: 41, title: "5kW Residential", location: "Kovilpatti", description: "Educational hub special: 5kW high-performance solar." },
   { id: 42, title: "3kW Residential", location: "Virugambakkam, Chennai", description: "Efficient 3kW residential solar grid for every home." }
-].map(project => ({
-  ...project,
-  // Automatically link project-1.webp etc by matching the ID
-  image: projectImages[`../assets/projects/project-${project.id}.webp`]?.default || 
-         projectImages[`../assets/projects/project-${project.id}.png`]?.default || 
-         projectImages[`../assets/projects/project-${project.id}.jpg`]?.default || 
-         'https://images.unsplash.com/photo-1509391366360-fe5bb6521e77?auto=format&fit=crop&q=80&w=800'
-}));
+].map(project => {
+  const findImage = (id, ext) => {
+    const path = `../assets/projects/project-${id}.${ext}`;
+    // Check both standard path and ./ prefixed path just in case
+    return projectImages[path]?.default || projectImages[`./${path}`]?.default;
+  };
+
+  return {
+    ...project,
+    // Automatically link project-1.webp etc by matching the ID
+    image: findImage(project.id, 'webp') || 
+           findImage(project.id, 'png') || 
+           findImage(project.id, 'jpg') || 
+           'https://images.unsplash.com/photo-1509391366360-fe5bb6521e77?auto=format&fit=crop&q=80&w=800'
+  };
+});

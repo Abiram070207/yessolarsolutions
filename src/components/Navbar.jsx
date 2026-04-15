@@ -35,7 +35,7 @@ const Navbar = () => {
               {/* Sun Aura Glow */}
               <div className="absolute inset-0 bg-white/40 blur-2xl rounded-full scale-150"></div>
               <img 
-                src="/assets/images/logo.png" 
+                src="assets/images/logo.png" 
                 alt="Logo" 
                 className={`${isScrolled ? 'h-10' : 'h-14'} w-auto object-contain transition-all duration-300 relative z-10 rounded-lg`} 
               />

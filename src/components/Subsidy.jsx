@@ -11,7 +11,7 @@ const Subsidy = () => {
           
           <div className="lg:w-1/2">
             <div className="relative">
-              <img src="/assets/images/promo-image.webp" alt="Subsidy" className="rounded-2xl w-full shadow-2xl" />
+              <img src="assets/images/promo-image.webp" alt="Subsidy" className="rounded-2xl w-full shadow-2xl" />
               <div className="absolute -top-4 -left-4 bg-primary text-slate-900 px-6 py-3 rounded-lg font-heading font-extrabold text-2xl shadow-xl uppercase tracking-tighter">
                 ₹78k Save
               </div>

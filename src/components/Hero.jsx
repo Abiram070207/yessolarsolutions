@@ -7,13 +7,13 @@ const Hero = () => {
     <section id="home" className="relative min-h-[90vh] flex items-center pt-32 pb-20 overflow-hidden bg-slate-900 font-sans">
       {/* Visual Depth */}
       <div className="absolute inset-0 z-0">
-        <img src="/assets/images/background.png" className="w-full h-full object-cover opacity-30 mix-blend-overlay" alt="Solar" />
+        <img src="assets/images/background.png" className="w-full h-full object-cover opacity-30 mix-blend-overlay" alt="Solar" />
         <div className="absolute inset-0 bg-gradient-to-b from-slate-950/20 via-slate-900 to-slate-900"></div>
         
         {/* Large Ghost Logo - Fading out towards text */}
         <div className="absolute -right-20 top-1/2 -translate-y-1/2 w-[60%] h-full opacity-[0.15] pointer-events-none select-none hidden lg:block overflow-hidden">
            <img 
-             src="/assets/images/logo.png" 
+             src="assets/images/logo.png" 
              className="w-full h-full object-contain mix-blend-lighten scale-125" 
              alt="" 
              style={{ 
